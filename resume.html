@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Category | Yuda Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #0050FF;
+            --bg-krem: #F3EEEA;
+            --white: #FFFFFF;
+            --text-dark: #1A1A1A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-krem);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .menu-container {
+            text-align: center;
+            width: 100%;
+            max-width: 900px;
+            padding: 20px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+
+        .options-wrapper {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .option-card {
+            background: var(--white);
+            flex: 1;
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .option-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 80, 255, 0.1);
+            border-color: var(--primary-blue);
+        }
+
+        .iconbox {
+            width: 80px;
+            height: 80px;
+            background: #f0f4ff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 30px;
+            color: var(--primary-blue);
+            transition: 0.3s;
+        }
+
+        .option-card:hover .iconbox {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .option-card h2 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .option-card p {
+            font-size: 14px;
+            color: #777;
+            line-height: 1.5;
+        }
+
+        .btn-home {
+            margin-top: 60px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-home:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Responsive untuk HP */
+        @media (max-width: 650px) {
+            .options-wrapper {
+                flex-direction: column;
+            }
+            body {
+                height: auto;
+                padding: 60px 20px;
+                overflow: visible;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <h1>Project Library</h1>
+        <p class="subtitle">Pilih kategori project yang mau lo liat</p>
+
+        <div class="options-wrapper">
+            <a href="cooming.html" class="option-card">
+                <div class="iconbox">
+                    <i class="fas fa-sliders-h"></i>
+                </div>
+                <h2>Configs</h2>
+                <p>??</p>
+            </a>
+
+            <a href="addon.html" class="option-card">
+                <div class="iconbox">
+                    <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <h2>Add-ons</h2>
+                <p>Semua addon bedrock download ada disini!</p>
+            </a>
+        </div>
+
+        <a href="index.html" class="btn-home">
+            <i class="fas fa-chevron-left"></i> Balik ke Home
+        </a>
+    </div>
+
+</body>
+</html>

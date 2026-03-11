@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Yuda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #0050FF;
+            --whatsapp-green: #25D366;
+            --bg-krem: #F3EEEA;
+            --text-dark: #1A1A1A;
+            --text-gray: #555555;
+            --white: #FFFFFF;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #EBEBEB;
+            padding: 20px;
+        }
+
+        /* --- Animasi Utama --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeInUp 0.7s ease-out forwards;
+            opacity: 0;
+        }
+
+        /* --- Container Utama --- */
+        .main-card {
+            display: flex;
+            width: 100%;
+            max-width: 950px;
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-section {
+            flex: 0.9;
+            background-color: var(--bg-krem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 40px;
+        }
+
+        .profile-inner-card {
+            background: var(--white);
+            width: 100%;
+            padding: 40px 0 0 0;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .img-container {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            overflow: hidden;
+            border: 4px solid var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .divider {
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-blue);
+            margin: 20px auto;
+        }
+
+        .role {
+            font-size: 13px;
+            letter-spacing: 3px;
+            color: var(--text-gray);
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .social-bar {
+            background-color: #FAFAFA;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            border-top: 1px solid #EEEEEE;
+        }
+
+        .social-bar a {
+            color: var(--text-dark);
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        /* Hover Khusus WhatsApp */
+        .social-bar a.wa-icon:hover {
+            color: var(--whatsapp-green);
+            transform: translateY(-3px);
+        }
+
+        .social-bar a:hover {
+            color: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+
+        /* Bagian Kanan: Konten */
+        .content-section {
+            flex: 1.1;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .content-section h1 {
+            font-size: 90px;
+            font-weight: 800;
+            line-height: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .content-section h2 {
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 35px;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 12px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .btn-filled {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-dark);
+            border: 2px solid var(--text-dark);
+        }
+
+        .bio-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-gray);
+        }
+
+        /* Delay Animasi */
+        .anim-1 { animation-delay: 0.1s; }
+        .anim-2 { animation-delay: 0.3s; }
+        .anim-3 { animation-delay: 0.5s; }
+        .anim-4 { animation-delay: 0.7s; }
+        .anim-5 { animation-delay: 0.9s; }
+
+        @media (max-width: 850px) {
+            .main-card { flex-direction: column; max-width: 500px; }
+            .content-section { padding: 50px 30px; text-align: center; }
+            .content-section h1 { font-size: 60px; }
+            .btn-container { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-card">
+        <section class="profile-section">
+            <div class="profile-inner-card animate-fadeIn anim-1">
+                <div class="img-container">
+                    <img src="assets/yuda.jpg" alt=" Yuda">
+                </div>
+                <h3 class="name">Yuda</h3>
+                <div class="divider"></div>
+                <p class="role">Developer & Admin</p>
+                
+                <div class="social-bar">
+                    <a href="https://discord.com/users/1330047050024357992" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="cooming.html" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="cooming.html" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/6285124942860" class="wa-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h1 class="animate-fadeIn anim-2">Cihuuy</h1>
+            <h2 class="animate-fadeIn anim-3">madeBy : Yuda</h2>
+            
+            <div class="btn-container animate-fadeIn anim-4">
+                <a href="resume.html" class="btn btn-filled">Resume</a>
+                <a href="project.html" class="btn btn-outline">project</a>
+            </div>
+
+            <div class="bio-text animate-fadeIn anim-5">
+                <p>
+                    halo nama gw Yuda gw adalah seorang developer yang fokus sama gtps,mc,roblox (udah tutup), dan web designer
+                  
+                </p>
+                <p>
+                    sekarang lagi aktif ngerjain beberapa project yang tentu nya gaboleh di sebarin :v
+                </p>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | YudaCraft</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #0050FF;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #f2e9e1, #e0e7ff, #f3eee7, #dbeafe);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            max-width: 550px;
+            width: 90%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .badge {
+            background: var(--primary-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: clamp(35px, 7vw, 60px);
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        /* Progress Bar */
+        .progress-wrapper {
+            margin-bottom: 35px;
+            text-align: left;
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .progress-container {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 50px;
+            height: 8px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 75%; 
+            height: 100%;
+            background: var(--primary-blue);
+            border-radius: 50px;
+        }
+
+        /* Tombol Kembali */
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            border: 2px solid #1a1a1a;
+            border-radius: 50px;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s;
+            margin-bottom: 30px;
+        }
+
+        .btn-back:hover {
+            background: #1a1a1a;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .social-links a {
+            color: #1a1a1a;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-blue);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="glass-card">
+        <div class="badge">Development Mode</div>
+        <h1>Coming Soon</h1>
+        <p>website belom 100% jadi btw</p>
+
+        <div class="progress-wrapper">
+            <div class="progress-info">
+                <span>Progress</span>
+                <span>???</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-back">
+            <i class="fas fa-arrow-left"></i> Balik ke Home
+        </a>
+
+        <div class="social-links">
+            <a href="https://discord.com/users/1330047050024357992"><i class="fab fa-discord"></i></a>
+            <a href="cooming.html"><i class="fab fa-github"></i></a>
+            <a href="cooming.html"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/6285124942860"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>
